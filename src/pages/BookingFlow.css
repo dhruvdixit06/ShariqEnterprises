@@ -1,0 +1,119 @@
+/* Booking Flow - Clean Redesign */
+.booking-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.booking-card {
+  background-color: var(--bg-main);
+}
+
+.uc-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-subtle);
+}
+
+.uc-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.uc-step.active {
+  color: var(--text-main);
+}
+
+.step-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background-color: var(--border-color);
+  color: var(--text-muted);
+}
+
+.uc-step.active .step-circle {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.uc-line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--border-color);
+  margin: 0 16px;
+}
+
+/* Forms */
+.px-6 { padding-left: 2rem; padding-right: 2rem; }
+.pb-6 { padding-bottom: 2rem; }
+.pt-4 { padding-top: 1.5rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mx-auto { margin-left: auto; margin-right: auto; text-align: center; }
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+}
+.form-actions.right { justify-content: flex-end; }
+.form-actions.split { justify-content: space-between; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.gap-4 { gap: 1rem; }
+
+/* Invoice Box */
+.invoice-box {
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+}
+
+.invoice-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.text-secondary { color: var(--secondary); }
+
+.invoice-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-row {
+  border-top: 1px dashed var(--border-color);
+  font-size: 1.1rem;
+}
+
+/* Success */
+.success-icon {
+  color: #10b981;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .slot-grid { grid-template-columns: 1fr; gap: 0; }
+  .uc-step { font-size: 0.85rem; }
+  .uc-step span { display: none; }
+}
